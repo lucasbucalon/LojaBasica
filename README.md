@@ -3,7 +3,7 @@
 <br/>
 <h2>React + Vite + AWS + Node.js</h2>  
 <br/>
-<a href="https://lojapremium-7iq9.vercel.app/" target="_blank">Visite a loja</a>  
+<a href="https://loja-basica.vercel.app/" target="_blank">Visite a loja</a>  
 <br/>
 <p>A <strong>Loja Online</strong> foi desenvolvida para oferecer uma experiência de compra simples, moderna e eficiente.  
 Com um design clean e intuitivo, o foco está em facilitar a navegação e garantir que o cliente encontre o que procura de forma rápida e prática.  
