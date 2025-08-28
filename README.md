@@ -1,4 +1,5 @@
-# Loja Online  
+# Loja Online
+
 <br/>
 <h2>React + Vite + AWS + Node.js</h2>  
 <br/>
@@ -13,4 +14,4 @@ Ideal para quem está expandindo seus negócios e deseja atender diversos client
 <p>O projeto está pausado.</p>  
 <p>✔️ 50% do Front-end concluído (falta ajustar o design e torná-lo responsivo).</p>  
 <p>❌ O Back-end ainda não foi iniciado.</p>  
-<p>🔮 Futuramente, pret
+<p>🔮 Futuramente, pretendo convertê-lo em um PWA (Progressive Web App).</p>
