@@ -1,0 +1,116 @@
+.footer_wrapper {
+  width: 100%;
+  padding: 80px 0 0 0;
+  background-color: #fe9fbf;
+  position: relative;
+}
+
+.footer_contact {
+  display: flex;
+  justify-content: space-around;
+  color: black;
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    margin: 10px 30px 0 0;
+  }
+
+  a:hover {
+    color: #f54768;
+    text-decoration: underline;
+  }
+
+  /* LOGO DA LOJA */
+
+  .logo {
+    width: 17%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; /* Impede que o brilho ultrapasse a imagem */
+
+    & img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 120%;
+      height: 95%;
+      background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 30%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgba(255, 255, 255, 0) 70%
+      );
+      transform: skewX(-25deg);
+      animation: brilho 10s infinite;
+    }
+  }
+
+  @keyframes brilho {
+    0% {
+      left: -100%;
+    }
+    5% {
+      left: 100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+}
+
+.footer_dev {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  font-size: 1.5rem;
+  color: #000;
+
+  .dev {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    background-color: #000;
+    padding: 15px 0;
+    border-radius: 10px 10px 0 0;
+  }
+
+  h3 {
+    margin: 0 8px 0 0;
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  .dev:hover p {
+    color: #f54768;
+    text-decoration: underline;
+  }
+
+  .dev:hover h3 {
+    color: #f54768;
+    text-decoration: underline;
+  }
+}

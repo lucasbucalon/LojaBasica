@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "name": "João",
+    "surname": "Bucalon",
+    "cpf": "396.865.658-09",
+    "birthDate": "2000-05-25",
+    "password": "123456",
+    "image": "public/imageUser/perfil.png",
+    "email": "jlucasbucalon@gmail.com",
+    "phone": "(11) 99999-9999",
+    "whatsappNotifications": true,
+    "emailNotifications": true,
+    "address": {
+      "street": "Rua dos Bobos",
+      "number": "0",
+      "complement": "Apto 101",
+      "neighborhood": "Centro",
+      "city": "São Paulo",
+      "state": "SP",
+      "zip": "00000-000"
+    }
+  }
+]

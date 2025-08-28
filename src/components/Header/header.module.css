@@ -1,0 +1,256 @@
+.header {
+  display: flex;
+  width: 100%;
+  background-color: #fe9fbf;
+  position: relative;
+
+  & button {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  /* PERFIL E MENU */
+
+  .profile {
+    display: flex;
+    align-items: center;
+  }
+
+  .profile_user {
+    background-color: #ff6a6a;
+    margin: 0 10px;
+    display: flex;
+    display: inline-flex;
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile_text {
+    margin: 0 15px 0 0;
+    & p {
+      width: 100%;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
+  .profile_text:hover p {
+    color: #ff5858;
+    transition: 0.3s;
+  }
+
+  & .profile_user:hover {
+    background-color: #ff5858;
+    transform: scale(1.03);
+  }
+
+  .icon_user {
+    font-size: 3.5rem;
+    width: 3.5rem;
+    height: 3.3rem;
+  }
+
+  .profile_box {
+    background-color: #ff6a6a;
+    border-radius: 20px;
+    padding: 2px;
+    & .profile_item {
+      margin: 0 10px;
+      display: flex;
+      display: inline-flex;
+      width: 55px;
+      height: 55px;
+      border-radius: 100%;
+      cursor: pointer;
+      transition: 0.3s;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    & .profile_item:hover {
+      background-color: #ff5858;
+      transform: scale(1.03);
+    }
+    & .icon {
+      font-size: 3.5rem;
+      width: 3.5rem;
+      height: 3.3rem;
+    }
+  }
+}
+
+.header_content {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* LOGO DA LOJA */
+
+.logo {
+  width: 17%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden; /* Impede que o brilho ultrapasse a imagem */
+
+  & img {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 120%;
+    height: 95%;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8) 50%,
+      rgba(255, 255, 255, 0) 70%
+    );
+    transform: skewX(-25deg);
+    animation: brilho 10s infinite;
+  }
+}
+
+@keyframes brilho {
+  0% {
+    left: -100%;
+  }
+  5% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/*  BARRA DE PESQUISA */
+
+.search {
+  width: 35%;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  & input {
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 10px 0 10px 40px;
+    border-radius: 5px;
+    border: 0.5px solid #ff3c7d;
+    background-color: white;
+    color: #000;
+  }
+
+  & .icon_search {
+    position: absolute;
+    color: black;
+    left: 10px;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+/* BARRA DE NAVEGAÇÃO */
+
+.header_nav {
+  width: 100%;
+  border-radius: 5px;
+  margin: 15px 0 0 0;
+
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+  }
+
+  li {
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  a {
+    display: block;
+    padding: 5% 0;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.7rem;
+  }
+
+  li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .categorias_list,
+  .catalogos_list {
+    display: none;
+    position: absolute;
+    color: #000;
+    background-color: rgb(255, 223, 223);
+    width: 100%;
+    padding: 20px;
+    left: 0;
+    z-index: 99;
+    text-align: left;
+    border-radius: 0 0 10px 10px;
+
+    p {
+      padding: 10px 0 10px 20px;
+      border-radius: 10px;
+    }
+
+    p:hover {
+      background-color: #ffc3d7;
+    }
+
+    .icon {
+      height: 10px;
+      width: 10px;
+    }
+  }
+
+  .categorias_list,
+  .catalogos_list {
+    opacity: 1;
+    visibility: visible;
+    grid-template-columns: repeat(6, 1fr);
+    animation: none;
+  }
+
+  .up1,
+  .up2 {
+    display: none;
+    width: 45px !important;
+    height: 45px !important;
+    position: absolute;
+    z-index: 100;
+    margin-top: -11px;
+    color: rgb(255, 223, 223);
+  }
+
+  .up1 {
+    margin-left: 27px;
+  }
+
+  .up2 {
+    margin-left: 18px;
+  }
+}

@@ -1,0 +1,97 @@
+.banner_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #fe9fbf;
+
+  .banner_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .banner_list {
+    display: flex;
+    width: 100%;
+  }
+
+  .banner_item {
+    cursor: pointer;
+    flex-shrink: 0;
+    margin: 0 auto;
+    width: 100vw;
+  }
+
+  .banner_image {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .banner_button {
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    border: 1px solid #ffffff;
+    background-color: #fe9fbf;
+    transition: 0.3s;
+
+    & svg {
+      width: 30px;
+      height: 40px;
+      color: rgb(255, 255, 255);
+      transition: 0.3s;
+    }
+  }
+
+  .banner_button:hover svg {
+    transform: scale(1.2);
+  }
+
+  .banner_button:hover {
+    background-color: #ff7ca8;
+  }
+
+  .btn_prev {
+    left: -18px;
+    border-radius: 0 100% 100% 0;
+  }
+
+  .btn_next {
+    right: -18px;
+    border-radius: 100% 0 0 100%;
+  }
+
+  .indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 5px 0 7px 0;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #ffffff;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+  }
+
+  .indicator:hover {
+    background-color: #ff6a6a;
+  }
+
+  .active_indicator {
+    background-color: #ff0000;
+    transform: scale(1.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+  }
+}

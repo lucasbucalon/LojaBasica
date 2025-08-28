@@ -1,0 +1,134 @@
+.category_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  margin: 80px 0 0 0;
+  background-color: #ffe8e8;
+
+  .category_title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    h2 {
+      color: #000000;
+      margin-top: 0;
+    }
+
+    span {
+      width: 100%;
+      margin: 0 20px;
+      height: 1px;
+      background-color: #000000;
+    }
+  }
+
+  .category {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+  }
+
+  .category_container {
+    text-align: center;
+    flex: 0 0 calc(100% / 7);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    cursor: pointer;
+    opacity: 0.6;
+    z-index: 45;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    transform: scale(0.9);
+
+    .category_item {
+      margin: 0 10px;
+      background-color: #ff6a6a;
+      border-radius: 100%;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+      /* box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5); */
+    }
+
+    .category_item:hover img {
+      transform: scale(1.06);
+    }
+
+    span {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      bottom: 0;
+      background: linear-gradient(to bottom, #ffffff00 72%, #ffffff 10%);
+    }
+
+    p {
+      position: absolute;
+      color: #000;
+      bottom: 25px;
+    }
+
+    img {
+      width: 92%;
+      background-color: #5d3d3d;
+      border-radius: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .center {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 50;
+  }
+
+  .button svg {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background-color: #fe9fbf;
+    padding: 7px;
+    color: white;
+    transition: 0.3s;
+    transform: scale(1.5);
+    border: 1px solid #fff;
+  }
+
+  .button svg:hover {
+    background-color: #ff79a6;
+    transform: scale(1.6);
+  }
+
+  .prev {
+    left: -5px;
+  }
+
+  .next {
+    right: -5px;
+  }
+}

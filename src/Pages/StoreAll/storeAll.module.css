@@ -1,0 +1,50 @@
+@import url("../../css/AllProducts.module.css");
+@import url("../../components/Header/header.module.css");
+
+/* PAGINAS */
+
+.listProduct {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 60px 30px;
+  padding: 30px 3%;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  bottom: -50px;
+}
+
+.pagina_btn {
+  cursor: pointer;
+  margin: 0 5px;
+  padding: 3px 5px;
+  border: 1px solid #eca0a0;
+  border-radius: 3px;
+  background-color: grey;
+  font-size: 1.8rem;
+}
+
+.pagina_btn:hover {
+  background-color: #eca0a0;
+}
+
+.noProductMessage {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 200%;
+  height: 50vh;
+  font-size: 2rem;
+  color: #000000;
+  z-index: 0;
+}
